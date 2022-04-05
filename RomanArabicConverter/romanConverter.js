@@ -1,36 +1,42 @@
 class RomanConverter {
     convertToRoman(valueToConvert) {
-        let valueToReturn
+        let dozens = Math.trunc(valueToConvert/10)
+        let remainder = valueToConvert % 10
+        let valueToReturn = ""
 
-        if (valueToConvert == 1) {
-            valueToReturn = "I"
+        for (let i = 1; i <= dozens; i++) {
+            valueToReturn = valueToReturn + "X";
         }
-        if (valueToConvert == 2) {
-            valueToReturn = "II"
+
+        if (remainder == 1) {
+            valueToReturn += "I"
         }
-        if (valueToConvert == 3) {
-            valueToReturn = "III"
+        if (remainder == 2) {
+            valueToReturn += "II"
         }
-        if (valueToConvert == 4) {
-            valueToReturn = "IV"
+        if (remainder == 3) {
+            valueToReturn += "III"
         }
-        if (valueToConvert == 5) {
-            valueToReturn = "V"
+        if (remainder == 4) {
+            valueToReturn += "IV"
         }
-        if (valueToConvert == 6) {
-            valueToReturn = "VI"
+        if (remainder == 5) {
+            valueToReturn += "V"
         }
-        if (valueToConvert == 7) {
-            valueToReturn = "VII"
+        if (remainder == 6) {
+            valueToReturn += "VI"
         }
-        if (valueToConvert == 8) {
-            valueToReturn = "VIII"
+        if (remainder == 7) {
+            valueToReturn += "VII"
         }
-        if (valueToConvert == 9) {
-            valueToReturn = "IX"
+        if (remainder == 8) {
+            valueToReturn += "VIII"
         }
-        if (valueToConvert == 10) {
-            valueToReturn = "X"
+        if (remainder == 9) {
+            valueToReturn += "IX"
+        }
+        if (remainder == 0) {
+            valueToReturn += ""
         }
         return valueToReturn
     }

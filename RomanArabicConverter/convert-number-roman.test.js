@@ -86,7 +86,13 @@ test('Convert 10 to X', () => {
     expect(result).toBe(expectedResult);
 });
 
+test('Convert 21 to XXI', () => {
+    const valueToConvert = 21
+    const expectedResult = "XXI"
+    const result = romanConverter.convertToRoman(valueToConvert)
 
+    expect(result).toBe(expectedResult);
+});
 
 test('Convert I to 1', () => {
     const valueToConvert = "I"
